@@ -8,11 +8,21 @@ const Home: NextPage = () => {
     <div className="">
       <Layout>
         <Head>
-          <title>Vasu Gupta - Portfolio</title>
+          <title>Vasu Gupta</title>
           <meta
             name="description"
             content="Hello! I am a recent Computer Science and Physics graduate from the University of Alberta."
           />
+          <meta property="og:url" content="https://www.vasug.space/" />
+          <meta property="og:type" content="website" />
+          {/* <meta property="fb:app_id" content="your fb app id" /> */}
+          <meta property="og:title" content="Vasu Gupta" />
+          <meta name="twitter:card" content="summary" />
+          <meta
+            property="og:description"
+            content="Hello! I am a recent Computer Science and Physics graduate from the University of Alberta."
+          />
+          <meta property="og:image" content={"/banner.png"} />
         </Head>
 
         {/* Intro */}
