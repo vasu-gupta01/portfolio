@@ -4,11 +4,11 @@
 
 html,
 body {
-  background-color: rgb(250 250 249);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Roboto Slab', serif;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 a {
@@ -18,4 +18,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+.footer {
+  font-size: 1rem;
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
 }
