@@ -151,6 +151,7 @@ const Home: NextPage = () => {
               <a
                 key={`${"a-"} ${project.name}`}
                 target="_blank"
+                rel="noreferrer"
                 href={project.link}
               >
                 <div

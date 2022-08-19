@@ -87,6 +87,7 @@ const Navbar = () => {
             <Link href="/PunarVasuGupta-Resume2022.pdf">
               <a
                 target="_blank"
+                rel="noreferrer"
                 className="py-4 text-[#E63946] transition duration-300 ease-in-out hover:text-[#457B9D]"
                 onClick={handleClick}
               >
@@ -120,6 +121,7 @@ const Navbar = () => {
           <Link href="/PunarVasuGupta-Resume2022.pdf">
             <a
               target="_blank"
+              rel="noreferrer"
               className="mx-6 nav-link text-[#E63946] transition duration-300 ease-in-out hover:text-[#457B9D]"
             >
               Resume
