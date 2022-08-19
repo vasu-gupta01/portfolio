@@ -109,14 +109,23 @@ const Home: NextPage = () => {
         <div className="flex max-w-screen-lg flex-wrap w-full justify-center content-center m-auto">
           {Skills.map((skill) => {
             return (
-              <div className="w-full md:w-1/2 p-4">
-                <p className="text-xl font-bold text-center mb-4">
+              <div key={`${"div-"} ${skill}`} className="w-full md:w-1/2 p-4">
+                <p
+                  key={`${"p-"} ${skill}`}
+                  className="text-xl font-bold text-center mb-4"
+                >
                   {skill.type}:
                 </p>
-                <div className="flex flex-wrap justify-center">
+                <div
+                  key={`${"div2-"} ${skill}`}
+                  className="flex flex-wrap justify-center"
+                >
                   {skill.skills.map((val) => {
                     return (
-                      <span className="bg-[#E5F6DF] text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                      <span
+                        key={`${"span-"} ${val}`}
+                        className="bg-[#E5F6DF] text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                      >
                         {val}
                       </span>
                     );
@@ -139,18 +148,36 @@ const Home: NextPage = () => {
         <div className="flex flex-wrap justify-evenly subpixel-antialiased">
           {Projects.map((project) => {
             return (
-              <a target="_blank" href={project.link}>
-                <div className="flex flex-col justify-between m-2 mb-6 p-8 w-80 h-80 shadow-2xl bg-gray-100 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 hover:bg-gray-200">
-                  <div>
-                    <p className="text-xl mb-4 font-bold">{project.name}</p>
+              <a
+                key={`${"a-"} ${project.name}`}
+                target="_blank"
+                href={project.link}
+              >
+                <div
+                  key={`${"div-"} ${project.name}`}
+                  className="flex flex-col justify-between m-2 mb-6 p-8 w-80 h-80 shadow-2xl bg-gray-100 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 hover:bg-gray-200"
+                >
+                  <div key={`${"div2-"} ${project.name}`}>
+                    <p
+                      key={`${"p-"} ${project.name}`}
+                      className="text-xl mb-4 font-bold"
+                    >
+                      {project.name}
+                    </p>
                     <p className="mb-2 text-sm font-medium">
                       {project.description}
                     </p>
                   </div>
-                  <div className="flex flex-wrap">
+                  <div
+                    key={`${"div3-"} ${project.name}`}
+                    className="flex flex-wrap"
+                  >
                     {project.tags.map((tag) => {
                       return (
-                        <span className="bg-[#E5F6DF] text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        <span
+                          key={`${"span-"} ${tag}`}
+                          className="bg-[#E5F6DF] text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                        >
                           {tag}
                         </span>
                       );
