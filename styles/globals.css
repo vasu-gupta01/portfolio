@@ -6,30 +6,17 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto Slab', serif;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
 }
-/* 
-.nav-title {
-  font-family: 'Oleo Script Swash Caps', cursive;
-} */
 
-.footer {
-  font-size: 1rem;
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.nav-title {
+  font-family: "Roboto Slab", serif;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
