@@ -8,4 +8,4 @@ My goal here is to display any personal (or non-personal) projects that I work o
 
 - **Next.js** : Having had previous experience with React, I found using Next.js to be super efficient. It has some pretty cool features and makes page routing super easy.
 
-- **Tailwindcss** : Made designing the website si
+- **Tailwindcss** : Made designing the website crazy simple and look prettyyy.
