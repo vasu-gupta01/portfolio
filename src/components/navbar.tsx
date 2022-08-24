@@ -25,7 +25,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleShow);
     };
-  });
+  }, [prevScrollY]);
 
   useEffect(() => {
     const handleMouseDown = ({ target }: MouseEvent) => {
