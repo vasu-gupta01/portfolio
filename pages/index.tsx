@@ -19,6 +19,14 @@ const Projects = [
     tags: ["Next.js", "React.js", "Tailwindcss"],
   },
   {
+    name: "Client-Server Architecture Implementation",
+    link: "https://github.com/vasu-gupta01/client-server",
+    description:
+      "An implementation of a single-threaded server and client application. Programmed in C using the linux socket API.",
+    tags: ["OS programming", "Linux"],
+  },
+
+  {
     name: "KrowdTrialz",
     link: "https://github.com/CMPUT301W21T05/KrowdTrialz",
     description:
@@ -71,17 +79,17 @@ const Home: NextPage = () => {
       {/* About Me */}
       <section
         id="intro-section"
-        className="flex flex-col max-w-screen-lg md:flex-row flex-wrap tracking-wide px-4 min-h-screen grow items-center pt-24 md:pt-0"
+        className="flex flex-col max-w-screen-lg md:flex-row flex-wrap tracking-wide px-4 min-h-screen grow items-center pt-24 mx-auto md:pt-0"
       >
         <div className="relative flex flex-col lg:basis-2/3 h-fit subpixel-antialiased font-normal">
-          <p className="text-5xl mb-2 leading-loose font-light">
-            Hi, my name is <span className="font-medium">Vasu Gupta</span>.
+          <p className="text-5xl mb-10 font-light text-gray-50">
+            Hi, my name is <span className="font-semibold">Vasu Gupta</span>.
           </p>
-          <p className="text-xl leading-relaxed mb-8">
+          <p className="font-medium text-md text-gray-50 leading-relaxed mb-8">
             I am a recent Computer Science and Physics graduate from the
             University of Alberta.
           </p>
-          <p className="text-xl leading-relaxed">
+          <p className="font-medium text-md text-gray-50 leading-relaxed">
             My interests include software engineering, embedded software,
             full-stack web development, and machine learning. I am constantly
             learning about new technologies and concepts that interest me!
@@ -99,52 +107,13 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      {/* Skills */}
-      <section
-        id="skills-section"
-        className="flex max-w-screen-xl content-start min-h-screen mx-auto flex-wrap tracking-wide px-4 py-24 text-gray-800"
-      >
-        <p className="w-full text-5xl font-light grow mb-20">Skills</p>
-
-        <div className="flex max-w-screen-lg flex-wrap w-full justify-center content-center m-auto">
-          {Skills.map((skill) => {
-            return (
-              <div key={`${"div-"} ${skill}`} className="w-full md:w-1/2 p-4">
-                <p
-                  key={`${"p-"} ${skill}`}
-                  className="text-xl font-bold text-center mb-4"
-                >
-                  {skill.type}:
-                </p>
-                <div
-                  key={`${"div2-"} ${skill}`}
-                  className="flex flex-wrap justify-center"
-                >
-                  {skill.skills.map((val) => {
-                    return (
-                      <span
-                        key={`${"span-"} ${val}`}
-                        className="bg-[#E5F6DF] text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
-                      >
-                        {val}
-                      </span>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
       {/* Projects */}
       <section
         id="projects-section"
-        className="flex justify-center max-w-screen-xl min-h-screen flex-wrap tracking-wide px-4 py-24"
+        className="flex justify-center max-w-screen-xl min-h-screen flex-wrap tracking-wide px-4 py-8"
       >
-        <div className="w-full mb-10">
-          <p className="text-5xl font-light grow">Projects</p>
-        </div>
+        <p className="text-4xl font-thin grow mb-6 h-fit">Projects</p>
+
         <div className="flex flex-wrap justify-evenly subpixel-antialiased">
           {Projects.map((project) => {
             return (
@@ -156,7 +125,7 @@ const Home: NextPage = () => {
               >
                 <div
                   key={`${"div-"} ${project.name}`}
-                  className="flex flex-col justify-between m-2 mb-6 p-8 w-80 h-80 shadow-2xl bg-gray-100 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 hover:bg-gray-200"
+                  className="flex flex-col justify-between m-2 mb-6 p-7 w-80 h-64 shadow-2xl bg-[#002029] text-gray-50 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 hover:bg-[#004052]"
                 >
                   <div key={`${"div2-"} ${project.name}`}>
                     <p
@@ -165,7 +134,7 @@ const Home: NextPage = () => {
                     >
                       {project.name}
                     </p>
-                    <p className="mb-2 text-sm font-medium">
+                    <p className="mb-2 text-sm font-semibold">
                       {project.description}
                     </p>
                   </div>
@@ -177,7 +146,7 @@ const Home: NextPage = () => {
                       return (
                         <span
                           key={`${"span-"} ${tag}`}
-                          className="bg-[#E5F6DF] text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                          className="font-mono text-gray-300 text-xs font-normal mr-2 my-1 px-2.5 py-0.5 rounded"
                         >
                           {tag}
                         </span>
