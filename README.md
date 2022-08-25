@@ -1,6 +1,6 @@
 # My Portfolio Website - Version 1.0
 
-This is my first attempt at designing and building a [portfolio website](https://www.example.com).
+This is my first attempt at designing and building a [portfolio website](https://www.vasug.space/).
 
 My goal here is to display any personal (or non-personal) projects that I work on. The design is super simple for now and I'm experimenting on making it more interesting in the future.
 
