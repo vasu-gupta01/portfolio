@@ -10,13 +10,14 @@ const Navbar = () => {
   const [prevScrollY, setPrevScrollY] = useState(0);
 
   const handleShow = () => {
-    if (window?.scrollY > prevScrollY) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
+    const currentScrollY = window.scrollY;
 
-    setPrevScrollY(window?.scrollY);
+    setShow(
+      (prevScrollY > currentScrollY && prevScrollY - currentScrollY > 5) ||
+        currentScrollY < 10
+    );
+
+    setPrevScrollY(currentScrollY);
   };
 
   useEffect(() => {
@@ -65,7 +66,10 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col md:hidden justify-between my-auto">
-          <div className="space-y-2 mx-6" onClick={() => setNavOpen(!navOpen)}>
+          <div
+            className="space-y-2 mx-6 z-20"
+            onClick={() => setNavOpen(!navOpen)}
+          >
             <div className="block h-1 w-8 rounded bg-gray-300" />
             <div className="block h-1 w-8 rounded bg-gray-300" />
             <div className="block h-1 w-8 rounded bg-gray-300" />
