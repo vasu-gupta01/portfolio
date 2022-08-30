@@ -5,11 +5,11 @@ import Layout from "../src/components/layout";
 
 const Projects = [
   {
-    name: "Workout Tracker (COMING SOON)",
-    link: "",
+    name: "Popin",
+    link: "https://www.about.popin.ca/",
     description:
-      "A cross-platform mobile application to track a workout session.",
-    tags: ["React Native"],
+      "Popin is a web application that allows students to host and find events. It is built by a group of students from the University of Alberta.",
+    tags: ["Next.js", "Firebase"],
   },
   {
     name: "Portfolio Website",
