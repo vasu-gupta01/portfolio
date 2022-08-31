@@ -13,27 +13,6 @@ const Navbar = () => {
 
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  const renderThemeChanger = () => {
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return (
-        <SunIcon
-          className="w-10 h-10 text-yellow-500 transition-all"
-          role="button"
-          onClick={() => setTheme("light")}
-        />
-      );
-    } else {
-      return (
-        <MoonIcon
-          className="w-10 h-10 text-gray-900 transition-all"
-          role="button"
-          onClick={() => setTheme("dark")}
-        />
-      );
-    }
-  };
 
   const handleShow = () => {
     const currentScrollY = window.scrollY;
@@ -76,14 +55,28 @@ const Navbar = () => {
       }`}
     >
       <nav className="flex justify-between py-5 flex-wrap nav-text max-w-screen-2xl m-auto px-4 font-bold">
-        <div className="relative z-20 place-items-start text-3xl my-auto dark:text-gray-50 tracking-tighter font-semibold">
+        <div className="relative z-20 place-items-start text-3xl my-auto dark:text-gray-50 tracking-tighter font-semibold md:flex hidden">
           <Link href="/">
             <a className="nav-title transition duration-150 ease-in-out hover:text-[#00607A] dark:hover:text-[#5FD3C6]">
               Vasu Gupta.
             </a>
           </Link>
         </div>
-
+        <div className="mx-2 md:hidden flex">
+          {currentTheme === "dark" ? (
+            <SunIcon
+              className="w-8 h-8 text-yellow-500 transition-all hover:text-yellow-300"
+              role="button"
+              onClick={() => setTheme("light")}
+            />
+          ) : (
+            <MoonIcon
+              className="w-8 h-8 text-gray-900 transition-all hover:text-gray-500"
+              role="button"
+              onClick={() => setTheme("dark")}
+            />
+          )}
+        </div>
         <div
           className="flex flex-col md:hidden justify-between my-auto"
           ref={navRef}
@@ -98,7 +91,7 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`${"transition ease-in-out duration-300 fixed flex flex-col flex-wrap rounded-lg text-md tracking-wider font-medium divide-y w-full shadow-lg right-0 justify-between items-center px-4 bg-gray-50  dark:bg-[#00303D]/30 dark:text-gray-100 pb-3"} ${
+            className={`${"transition ease-in-out duration-300 fixed flex flex-col flex-wrap rounded-lg text-md tracking-wider font-medium divide-y w-full shadow-lg right-0 justify-between items-center px-4 bg-gray-50  dark:bg-[#00303D] dark:text-gray-100 pb-3"} ${
               navOpen ? "block translate-y-12" : "-translate-y-full opacity-0"
             }`}
           >
