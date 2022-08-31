@@ -85,11 +85,11 @@ const Home: NextPage = () => {
           <p className="text-5xl mb-10 font-light text-gray-50">
             Hi, my name is <span className="font-semibold">Vasu Gupta</span>.
           </p>
-          <p className="font-medium text-md text-gray-50 leading-relaxed mb-8">
+          <p className="font-normal text-md text-gray-50 leading-relaxed mb-8">
             I am a recent Computer Science and Physics graduate from the
             University of Alberta.
           </p>
-          <p className="font-medium text-md text-gray-50 leading-relaxed">
+          <p className="font-normal text-md text-gray-50 leading-relaxed">
             My interests include software engineering, embedded software,
             full-stack web development, and machine learning. I am constantly
             learning about new technologies and concepts that interest me!
@@ -112,7 +112,13 @@ const Home: NextPage = () => {
         id="projects-section"
         className="flex justify-center min-h-screen flex-wrap tracking-wide px-4 py-8"
       >
-        <p className="text-4xl font-thin grow mb-6 h-fit">Projects</p>
+        <div className="flex flex-row grow mb-8 py-2 justify-center items-center">
+          <div className="h-0.5 grow bg-[#004052] mr-4"></div>
+          <p className="text-xl font-semibold w-fit text-gray-400">
+            Projects I've Worked On
+          </p>
+          <div className="h-0.5 grow bg-[#004052] ml-4"></div>
+        </div>
 
         <div className="flex flex-wrap justify-evenly subpixel-antialiased">
           {Projects.map((project) => {
@@ -125,16 +131,16 @@ const Home: NextPage = () => {
               >
                 <div
                   key={`${"div-"} ${project.name}`}
-                  className="flex flex-col justify-between m-2 mb-6 p-7 w-80 h-64 shadow-2xl bg-[#002029] text-gray-50 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 hover:bg-[#004052]"
+                  className="flex flex-col justify-between m-2 mb-6 p-7 w-96 h-64 hover:shadow-2xl bg-[#002029] text-gray-400 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 antialiased"
                 >
                   <div key={`${"div2-"} ${project.name}`}>
                     <p
                       key={`${"p-"} ${project.name}`}
-                      className="text-xl mb-4 font-bold"
+                      className="text-xl mb-4 font-bold text-gray-200"
                     >
                       {project.name}
                     </p>
-                    <p className="mb-2 text-sm font-semibold">
+                    <p className="mb-2 text-sm font-normal">
                       {project.description}
                     </p>
                   </div>

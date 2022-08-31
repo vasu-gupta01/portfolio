@@ -7,7 +7,7 @@ const Sidebar = () => {
         rel="noreferrer"
       >
         <svg
-          className="fill-[#00607A] w-6 h-6 m-4 hover:fill-[#00A0CC] hover:-translate-y-1 transition-color duration-200 ease-in-out"
+          className="fill-[#00607A] w-6 h-6 m-4 hover:fill-[#5FD3C6] hover:-translate-y-1 transition-color duration-200 ease-in-out"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ const Sidebar = () => {
         rel="noreferrer"
       >
         <svg
-          className="fill-[#00607A] w-6 h-6 m-4 hover:fill-[#00A0CC] hover:-translate-y-1 transition-color duration-200 ease-in-out"
+          className="fill-[#00607A] w-6 h-6 m-4 hover:fill-[#5FD3C6] hover:-translate-y-1 transition-color duration-200 ease-in-out"
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"

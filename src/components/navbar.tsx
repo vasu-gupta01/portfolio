@@ -59,7 +59,7 @@ const Navbar = () => {
       <nav className="relative flex justify-between py-5 flex-wrap nav-text max-w-screen-xl m-auto px-4">
         <div className="relative z-20 place-items-start text-3xl my-auto text-gray-50 tracking-tighter font-semibold">
           <Link href="/">
-            <a className="nav-title transition duration-300 ease-in-out hover:text-gray-300">
+            <a className="nav-title transition duration-300 ease-in-out hover:text-[#5FD3C6]">
               Vasu Gupta.
             </a>
           </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
           >
             <Link href="">
               <a
-                className="py-4 transition duration-300 ease-in-out hover:text-gray-400"
+                className="py-4 transition duration-300 ease-in-out hover:text-[#00A0CC]"
                 onClick={handleClick}
               >
                 About Me
@@ -91,7 +91,7 @@ const Navbar = () => {
             </Link>
             <Link href="#projects-section">
               <a
-                className="py-4 transition duration-300 ease-in-out hover:text-gray-400"
+                className="py-4 transition duration-300 ease-in-out hover:text-[#00A0CC]"
                 onClick={handleClick}
               >
                 Projects
@@ -99,7 +99,7 @@ const Navbar = () => {
             </Link>
             <Link href="">
               <a
-                className="py-4 transition duration-300 ease-in-out hover:text-gray-400"
+                className="py-4 transition duration-300 ease-in-out hover:text-[#00A0CC]"
                 onClick={handleClick}
               >
                 Contact
@@ -109,7 +109,7 @@ const Navbar = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                className="py-4 text-[#A4DF90] transition duration-300 ease-in-out hover:text-gray-400"
+                className="py-4 text-[#A4DF90] transition duration-300 ease-in-out hover:text-[#00A0CC]"
                 onClick={handleClick}
               >
                 Resume
@@ -118,19 +118,19 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="text-md font-semibold text-gray-100 justify-between my-auto hidden md:block tracking-wide">
+        <div className="text-sm font-normal text-gray-100 justify-between my-auto hidden md:block tracking-widest">
           <Link href="">
-            <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-gray-300">
+            <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-[#5FD3C6]">
               About Me
             </a>
           </Link>
           <Link href="#projects-section">
-            <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-gray-300">
+            <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-[#5FD3C6]">
               Projects
             </a>
           </Link>
           <Link href="">
-            <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-gray-300">
+            <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-[#5FD3C6]">
               Contact
             </a>
           </Link>
@@ -138,7 +138,7 @@ const Navbar = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              className="mx-6 nav-link text-[#A4DF90] transition duration-300 ease-in-out hover:text-gray-400"
+              className="mx-6 nav-link text-[#A4DF90] transition duration-300 ease-in-out hover:text-[#00A0CC]"
             >
               Resume
             </a>
