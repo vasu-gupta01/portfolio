@@ -12,7 +12,24 @@ const Navbar = () => {
   const [prevScrollY, setPrevScrollY] = useState(0);
 
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+
+  const handleTheme = () => {
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    return currentTheme === "dark" ? (
+      <SunIcon
+        className="w-8 h-8 text-yellow-500 transition-all hover:text-yellow-300"
+        role="button"
+        onClick={() => setTheme("light")}
+      />
+    ) : (
+      <MoonIcon
+        className="w-8 h-8 text-gray-900 transition-all hover:text-gray-500"
+        role="button"
+        onClick={() => setTheme("dark")}
+      />
+    );
+  };
 
   const handleShow = () => {
     const currentScrollY = window.scrollY;
@@ -62,21 +79,7 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
-        <div className="mx-2 md:hidden flex">
-          {currentTheme === "dark" ? (
-            <SunIcon
-              className="w-8 h-8 text-yellow-500 transition-all hover:text-yellow-300"
-              role="button"
-              onClick={() => setTheme("light")}
-            />
-          ) : (
-            <MoonIcon
-              className="w-8 h-8 text-gray-900 transition-all hover:text-gray-500"
-              role="button"
-              onClick={() => setTheme("dark")}
-            />
-          )}
-        </div>
+        <div className="mx-2 md:hidden flex">{handleTheme()}</div>
         <div
           className="flex flex-col md:hidden justify-between my-auto"
           ref={navRef}
@@ -150,21 +153,7 @@ const Navbar = () => {
               </a>
             </Link>
           </div>
-          <div className="mx-6">
-            {currentTheme === "dark" ? (
-              <SunIcon
-                className="w-8 h-8 text-yellow-500 transition-all hover:text-yellow-300"
-                role="button"
-                onClick={() => setTheme("light")}
-              />
-            ) : (
-              <MoonIcon
-                className="w-8 h-8 text-gray-900 transition-all hover:text-gray-500"
-                role="button"
-                onClick={() => setTheme("dark")}
-              />
-            )}
-          </div>
+          <div className="mx-6">{handleTheme()}</div>
         </div>
       </nav>
     </div>
