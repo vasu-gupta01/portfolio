@@ -110,7 +110,7 @@ const Home: NextPage = () => {
       {/* Projects */}
       <section
         id="projects-section"
-        className="flex justify-center max-w-screen-xl min-h-screen flex-wrap tracking-wide px-4 py-8"
+        className="flex justify-center min-h-screen flex-wrap tracking-wide px-4 py-8"
       >
         <p className="text-4xl font-thin grow mb-6 h-fit">Projects</p>
 
