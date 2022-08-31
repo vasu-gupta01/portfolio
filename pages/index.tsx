@@ -115,7 +115,7 @@ const Home: NextPage = () => {
         <div className="flex flex-row grow mb-8 py-2 justify-center items-center">
           <div className="h-0.5 grow bg-[#004052] mr-4"></div>
           <p className="text-xl font-semibold w-fit text-gray-400">
-            Projects I've Worked On
+            Projects I&apos;ve Worked On
           </p>
           <div className="h-0.5 grow bg-[#004052] ml-4"></div>
         </div>

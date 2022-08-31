@@ -20,31 +20,27 @@ const Navbar = () => {
     setPrevScrollY(currentScrollY);
   };
 
+  const handleMouseDown = ({ target }: MouseEvent) => {
+    if (!navRef.current?.contains(target as Node)) {
+      setNavOpen(false);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleShow);
 
     return () => {
       window.removeEventListener("scroll", handleShow);
     };
-  }, [prevScrollY]);
+  }, [prevScrollY, handleShow, show]);
 
   useEffect(() => {
-    const handleMouseDown = ({ target }: MouseEvent) => {
-      if (!navRef.current?.contains(target as Node)) {
-        setNavOpen(false);
-      }
-    };
-
-    const handleScroll = () => {
-      setNavOpen(false);
-    };
-
     window.addEventListener("mousedown", handleMouseDown);
 
     return () => {
       window.removeEventListener("mousedown", handleMouseDown);
     };
-  }, []);
+  }, [handleMouseDown]);
 
   const handleClick = () => {
     setNavOpen(false);
@@ -65,25 +61,27 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col md:hidden justify-between my-auto">
+        <div
+          className="flex flex-col md:hidden justify-between my-auto"
+          ref={navRef}
+        >
           <div
             className="space-y-2 mx-6 z-20"
             onClick={() => setNavOpen(!navOpen)}
           >
-            <div className="block h-1 w-8 rounded bg-gray-300" />
-            <div className="block h-1 w-8 rounded bg-gray-300" />
-            <div className="block h-1 w-8 rounded bg-gray-300" />
+            <div className="block h-1 w-8 rounded bg-gray-100" />
+            <div className="block h-1 w-8 rounded bg-gray-100" />
+            <div className="block h-1 w-8 rounded bg-gray-100" />
           </div>
 
           <div
-            className={`${"transition ease transform duration-300 fixed flex flex-col flex-wrap rounded-lg text-md font-semibold divide-y w-full shadow-lg right-0 justify-between items-center px-4 bg-[#00303D] text-gray-100 pb-3"} ${
+            className={`${"transition ease transform duration-300 fixed flex flex-col flex-wrap rounded-lg text-sm tracking-wider font-semibold divide-y w-full shadow-lg right-0 justify-between items-center px-4 bg-[#00303D] text-gray-100 pb-3"} ${
               navOpen ? "block translate-y-12" : "-translate-y-full opacity-0"
             }`}
-            ref={navRef}
           >
             <Link href="">
               <a
-                className="py-4 transition duration-300 ease-in-out hover:text-[#00A0CC]"
+                className="py-4 transition duration-300 ease-in-out hover:text-[#5FD3C6]"
                 onClick={handleClick}
               >
                 About Me
@@ -91,7 +89,7 @@ const Navbar = () => {
             </Link>
             <Link href="#projects-section">
               <a
-                className="py-4 transition duration-300 ease-in-out hover:text-[#00A0CC]"
+                className="py-4 transition duration-300 ease-in-out hover:text-[#5FD3C6]"
                 onClick={handleClick}
               >
                 Projects
@@ -99,7 +97,7 @@ const Navbar = () => {
             </Link>
             <Link href="">
               <a
-                className="py-4 transition duration-300 ease-in-out hover:text-[#00A0CC]"
+                className="py-4 transition duration-300 ease-in-out hover:text-[#5FD3C6]"
                 onClick={handleClick}
               >
                 Contact
@@ -109,7 +107,7 @@ const Navbar = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                className="py-4 text-[#A4DF90] transition duration-300 ease-in-out hover:text-[#00A0CC]"
+                className="py-4 text-[#A4DF90] transition duration-300 ease-in-out hover:text-[#5FD3C6]"
                 onClick={handleClick}
               >
                 Resume
@@ -138,7 +136,7 @@ const Navbar = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              className="mx-6 nav-link text-[#A4DF90] transition duration-300 ease-in-out hover:text-[#00A0CC]"
+              className="mx-6 nav-link text-[#A4DF90] transition duration-300 ease-in-out hover:text-[#5FD3C6]"
             >
               Resume
             </a>
