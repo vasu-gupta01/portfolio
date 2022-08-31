@@ -131,7 +131,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="text-md flex flex-row font-medium items-center dark:text-gray-100 justify-between my-auto opacity-0 md:opacity-100 tracking-widest">
+        <div className="text-md md:flex flex-row font-medium items-center dark:text-gray-100 justify-between my-auto hidden tracking-widest">
           <div>
             <Link href="">
               <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-[#00607A] dark:hover:text-[#5FD3C6]">
