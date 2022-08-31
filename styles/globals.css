@@ -8,6 +8,7 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Source Sans Pro", sans-serif;
+  background-color: #00303d;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
