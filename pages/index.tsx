@@ -82,14 +82,14 @@ const Home: NextPage = () => {
         className="flex flex-col md:flex-row flex-wrap tracking-wide px-4 md:px-0 min-h-screen grow items-center pt-24 mx-auto md:pt-0"
       >
         <div className="relative flex flex-col lg:basis-3/4 h-fit">
-          <p className="text-5xl mb-10 font-light text-gray-50 font-serif">
+          <p className="text-5xl mb-10 font-light dark:text-gray-50 font-serif">
             Hi, my name is <span className="font-semibold">Vasu Gupta</span>.
           </p>
-          <p className="font-normal text-md text-gray-300 mb-8 max-w-xl tracking-wide font-sans">
+          <p className="font-normal text-lg dark:text-gray-300 mb-8 max-w-xl tracking-wide font-sans">
             I am a recent Computer Science and Physics graduate from the
             University of Alberta.
           </p>
-          <p className="font-normal text-md text-gray-300 max-w-xl tracking-wide">
+          <p className="font-normal text-lg dark:text-gray-300 max-w-xl tracking-wide">
             My interests include software engineering, embedded software,
             full-stack web development, and machine learning. I am constantly
             learning about new technologies and concepts that interest me!
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
       >
         <div className="flex flex-row grow mb-8 py-2 justify-center items-center">
           <div className="h-0.5 grow bg-[#004052] mr-4"></div>
-          <p className="text-xl font-semibold font-serif w-fit text-gray-400">
+          <p className="text-xl font-semibold font-serif w-fit dark:text-gray-400">
             Projects I&apos;ve Worked On
           </p>
           <div className="h-0.5 grow bg-[#004052] ml-4"></div>
@@ -131,12 +131,12 @@ const Home: NextPage = () => {
               >
                 <div
                   key={`${"div-"} ${project.name}`}
-                  className="flex flex-col justify-between m-2 mb-6 p-7 w-96 h-64 hover:shadow-2xl bg-[#002029] text-gray-400 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 antialiased"
+                  className="flex flex-col justify-between m-2 mb-6 p-7 w-96 h-64 hover:shadow-2xl bg-gray-200 dark:bg-[#002029] dark:text-gray-400 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 antialiased"
                 >
                   <div key={`${"div2-"} ${project.name}`}>
                     <p
                       key={`${"p-"} ${project.name}`}
-                      className="text-xl mb-4 font-bold text-gray-200"
+                      className="text-xl mb-4 font-bold dark:text-gray-200"
                     >
                       {project.name}
                     </p>
@@ -152,7 +152,7 @@ const Home: NextPage = () => {
                       return (
                         <span
                           key={`${"span-"} ${tag}`}
-                          className="font-mono text-gray-400 text-xs font-normal mr-2 my-1 px-2.5 py-0.5 rounded"
+                          className="font-mono dark:text-gray-400 text-xs font-normal mr-2 my-1 px-2.5 py-0.5 rounded"
                         >
                           {tag}
                         </span>

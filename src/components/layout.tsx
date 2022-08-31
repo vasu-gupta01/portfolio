@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import { useTheme } from "next-themes";
+import { ReactNode, useEffect } from "react";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
 
@@ -8,16 +9,18 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex flex-col h-full bg-[#00303D] subpixel-antialiased">
+    <div className="flex flex-col h-full dark:bg-[#00303D] subpixel-antialiased">
       <Navbar />
 
       <div className="flex flex-row max-w-screen-lg mx-auto font-sans">
         <Sidebar />
 
-        <main className="grow text-gray-100">{children}</main>
+        <main className="grow transition-all duration-300 ease-in-out">
+          {children}
+        </main>
       </div>
 
-      <footer className="flex flex-row flex-wrap justify-center items-center py-4 text-sm font-medium font-mono text-gray-200">
+      <footer className="flex flex-row flex-wrap justify-center items-center py-4 text-sm font-medium font-mono">
         <div className="">Designed & Built by Vasu Gupta - 2022</div>
         <div className="flex flex-row xl:hidden mx-8">
           <a
