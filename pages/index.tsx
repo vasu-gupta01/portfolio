@@ -79,7 +79,7 @@ const Home: NextPage = () => {
       {/* About Me */}
       <section
         id="intro-section"
-        className="flex flex-col md:flex-row flex-wrap tracking-wide px-4 md:px-0 min-h-screen grow items-center pt-24 mx-auto md:pt-0"
+        className="flex flex-col md:flex-row flex-wrap tracking-wide px-4 xl:px-0 min-h-screen grow items-center pt-24 mx-auto md:pt-0"
       >
         <div className="relative flex flex-col lg:basis-3/4 h-fit">
           <p className="text-5xl mb-10 font-light dark:text-gray-50 font-serif">

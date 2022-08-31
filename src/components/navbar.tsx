@@ -92,13 +92,13 @@ const Navbar = () => {
             className="space-y-2 mx-6 z-20"
             onClick={() => setNavOpen(!navOpen)}
           >
-            <div className="block h-1 w-8 rounded dark:bg-gray-100" />
-            <div className="block h-1 w-8 rounded dark:bg-gray-100" />
-            <div className="block h-1 w-8 rounded dark:bg-gray-100" />
+            <div className="block h-1 w-8 rounded bg-gray-800 dark:bg-gray-100" />
+            <div className="block h-1 w-8 rounded bg-gray-800  dark:bg-gray-100" />
+            <div className="block h-1 w-8 rounded bg-gray-800 dark:bg-gray-100" />
           </div>
 
           <div
-            className={`${"transition ease transform duration-300 fixed flex flex-col flex-wrap rounded-lg text-md tracking-wider font-medium divide-y w-full shadow-lg right-0 justify-between items-center px-4 dark:bg-[#00303D] dark:text-gray-100 pb-3"} ${
+            className={`${"transition ease-in-out duration-300 fixed flex flex-col flex-wrap rounded-lg text-md tracking-wider font-medium divide-y w-full shadow-lg right-0 justify-between items-center px-4 bg-gray-50  dark:bg-[#00303D]/30 dark:text-gray-100 pb-3"} ${
               navOpen ? "block translate-y-12" : "-translate-y-full opacity-0"
             }`}
           >
