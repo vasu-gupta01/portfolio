@@ -10,8 +10,15 @@ const Navbar = () => {
   const [prevScrollY, setPrevScrollY] = useState(0);
 
   const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleTheme = () => {
+    if (!mounted) return null;
+
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     if (currentTheme === "dark") {
