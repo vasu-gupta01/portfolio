@@ -12,10 +12,7 @@ const Navbar = () => {
   const handleShow = () => {
     const currentScrollY = window.scrollY;
 
-    setShow(
-      (prevScrollY > currentScrollY && prevScrollY - currentScrollY > 5) ||
-        currentScrollY < 10
-    );
+    setShow(prevScrollY > currentScrollY || currentScrollY < 10);
 
     setPrevScrollY(currentScrollY);
   };
@@ -52,7 +49,7 @@ const Navbar = () => {
         show ? "" : "-translate-y-20 opacity-0"
       }`}
     >
-      <nav className="relative flex justify-between py-5 flex-wrap nav-text max-w-screen-xl m-auto px-4">
+      <nav className="relative flex justify-between py-5 flex-wrap nav-text max-w-screen-2xl m-auto px-4 font-bold">
         <div className="relative z-20 place-items-start text-3xl my-auto text-gray-50 tracking-tighter font-semibold">
           <Link href="/">
             <a className="nav-title transition duration-300 ease-in-out hover:text-[#5FD3C6]">
@@ -75,7 +72,7 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`${"transition ease transform duration-300 fixed flex flex-col flex-wrap rounded-lg text-sm tracking-wider font-semibold divide-y w-full shadow-lg right-0 justify-between items-center px-4 bg-[#00303D] text-gray-100 pb-3"} ${
+            className={`${"transition ease transform duration-300 fixed flex flex-col flex-wrap rounded-lg text-md tracking-wider font-medium divide-y w-full shadow-lg right-0 justify-between items-center px-4 bg-[#00303D] text-gray-100 pb-3"} ${
               navOpen ? "block translate-y-12" : "-translate-y-full opacity-0"
             }`}
           >
@@ -95,14 +92,6 @@ const Navbar = () => {
                 Projects
               </a>
             </Link>
-            <Link href="">
-              <a
-                className="py-4 transition duration-300 ease-in-out hover:text-[#5FD3C6]"
-                onClick={handleClick}
-              >
-                Contact
-              </a>
-            </Link>
             <Link href="/PunarVasuGupta-Resume2022.pdf">
               <a
                 target="_blank"
@@ -116,7 +105,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="text-sm font-normal text-gray-100 justify-between my-auto hidden md:block tracking-widest">
+        <div className="text-md font-normal text-gray-100 justify-between my-auto hidden md:block tracking-widest">
           <Link href="">
             <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-[#5FD3C6]">
               About Me
@@ -125,11 +114,6 @@ const Navbar = () => {
           <Link href="#projects-section">
             <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-[#5FD3C6]">
               Projects
-            </a>
-          </Link>
-          <Link href="">
-            <a className="mx-6 nav-link transition duration-300 ease-in-out hover:text-[#5FD3C6]">
-              Contact
             </a>
           </Link>
           <Link href="/PunarVasuGupta-Resume2022.pdf">

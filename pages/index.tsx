@@ -79,23 +79,23 @@ const Home: NextPage = () => {
       {/* About Me */}
       <section
         id="intro-section"
-        className="flex flex-col max-w-screen-lg md:flex-row flex-wrap tracking-wide px-4 min-h-screen grow items-center pt-24 mx-auto md:pt-0"
+        className="flex flex-col md:flex-row flex-wrap tracking-wide px-4 md:px-0 min-h-screen grow items-center pt-24 mx-auto md:pt-0"
       >
-        <div className="relative flex flex-col lg:basis-2/3 h-fit subpixel-antialiased font-normal">
-          <p className="text-5xl mb-10 font-light text-gray-50">
+        <div className="relative flex flex-col lg:basis-3/4 h-fit">
+          <p className="text-5xl mb-10 font-light text-gray-50 font-serif">
             Hi, my name is <span className="font-semibold">Vasu Gupta</span>.
           </p>
-          <p className="font-normal text-md text-gray-50 leading-relaxed mb-8">
+          <p className="font-normal text-md text-gray-300 mb-8 max-w-xl tracking-wide font-sans">
             I am a recent Computer Science and Physics graduate from the
             University of Alberta.
           </p>
-          <p className="font-normal text-md text-gray-50 leading-relaxed">
+          <p className="font-normal text-md text-gray-300 max-w-xl tracking-wide">
             My interests include software engineering, embedded software,
             full-stack web development, and machine learning. I am constantly
             learning about new technologies and concepts that interest me!
           </p>
         </div>
-        <div className="relative flex flex-col grow lg:basis-1/3 items-center p-2">
+        <div className="relative flex flex-col grow lg:basis-1/4 items-center p-2">
           <Image
             className="rounded-full"
             src="/profile.jpeg"
@@ -114,13 +114,13 @@ const Home: NextPage = () => {
       >
         <div className="flex flex-row grow mb-8 py-2 justify-center items-center">
           <div className="h-0.5 grow bg-[#004052] mr-4"></div>
-          <p className="text-xl font-semibold w-fit text-gray-400">
+          <p className="text-xl font-semibold font-serif w-fit text-gray-400">
             Projects I&apos;ve Worked On
           </p>
           <div className="h-0.5 grow bg-[#004052] ml-4"></div>
         </div>
 
-        <div className="flex flex-wrap justify-evenly subpixel-antialiased">
+        <div className="flex flex-wrap justify-evenly">
           {Projects.map((project) => {
             return (
               <a
@@ -152,7 +152,7 @@ const Home: NextPage = () => {
                       return (
                         <span
                           key={`${"span-"} ${tag}`}
-                          className="font-mono text-gray-300 text-xs font-normal mr-2 my-1 px-2.5 py-0.5 rounded"
+                          className="font-mono text-gray-400 text-xs font-normal mr-2 my-1 px-2.5 py-0.5 rounded"
                         >
                           {tag}
                         </span>

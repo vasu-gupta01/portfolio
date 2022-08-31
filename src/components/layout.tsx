@@ -11,17 +11,15 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="flex flex-col h-full bg-[#00303D] subpixel-antialiased">
       <Navbar />
 
-      <div className="flex flex-row max-w-screen-xl">
-        <div className="lg:basis-1/4">
-          <Sidebar />
-        </div>
+      <div className="flex flex-row max-w-screen-lg mx-auto font-sans">
+        <Sidebar />
 
-        <main className="grow mx-auto text-gray-100">{children}</main>
+        <main className="grow text-gray-100">{children}</main>
       </div>
 
       <footer className="flex flex-row flex-wrap justify-center items-center py-4 text-sm font-medium font-mono text-gray-200">
         <div className="">Designed & Built by Vasu Gupta - 2022</div>
-        <div className="flex flex-row lg:hidden mx-8">
+        <div className="flex flex-row xl:hidden mx-8">
           <a
             href="https://github.com/vasu-gupta01"
             target="_blank"
