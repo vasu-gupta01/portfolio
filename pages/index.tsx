@@ -19,13 +19,12 @@ const Projects = [
     tags: ["Next.js", "React.js", "Tailwindcss"],
   },
   {
-    name: "Client-Server Architecture Implementation",
-    link: "https://github.com/vasu-gupta01/client-server",
+    name: "Canadian Reduced Gravity Experiment Design Challenge (CAN-RGX)",
+    link: "#",
     description:
-      "An implementation of a single-threaded server and client application. Programmed in C using the linux socket API.",
-    tags: ["OS programming", "Linux"],
+      "Project title: Determining Response Differences to Microgravity in Male and Female Bioengineered Cartilage Tissue. Assisted in designing an electrical system for the project, created electrical schematics. Presented progress reports to SEDS, CSA, and NRC representatives.",
+    tags: ["Embedded Systems", "Research"],
   },
-
   {
     name: "KrowdTrialz",
     link: "https://github.com/CMPUT301W21T05/KrowdTrialz",
