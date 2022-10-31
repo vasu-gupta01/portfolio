@@ -20,7 +20,7 @@ const Projects = [
   },
   {
     name: "Canadian Reduced Gravity Experiment Design Challenge (CAN-RGX)",
-    link: "#",
+    link: "",
     description:
       "Project title: Determining Response Differences to Microgravity in Male and Female Bioengineered Cartilage Tissue. Assisted in designing an electrical system for the project, created electrical schematics. Presented progress reports to SEDS, CSA, and NRC representatives.",
     tags: ["Embedded Systems", "Research"],
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
               >
                 <div
                   key={`${"div-"} ${project.name}`}
-                  className="flex flex-col justify-between m-2 mb-6 p-7 w-96 h-64 hover:shadow-2xl bg-gray-200 dark:bg-[#002029] dark:text-gray-400 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 antialiased"
+                  className="flex flex-col justify-between m-2 mb-6 p-7 w-96 h-auto hover:shadow-2xl bg-gray-200 dark:bg-[#002029] dark:text-gray-400 rounded-xl transition ease-in-out duration-300 hover:-translate-y-2 antialiased"
                 >
                   <div key={`${"div2-"} ${project.name}`}>
                     <p
